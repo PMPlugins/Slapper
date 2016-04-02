@@ -4,6 +4,7 @@ namespace slapper\entities;
 
 use pocketmine\entity\Entity;
 use pocketmine\network\protocol\AddEntityPacket;
+use pocketmine\nbt\tag\Int;
 use pocketmine\Player;
 
 class SlapperZombieVillager extends Entity implements SlapperEntity
