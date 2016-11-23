@@ -1,0 +1,7 @@
+---
+branches: php7
+projects:
+  Slapper:
+    path: ""
+    model: default
+...
