@@ -37,7 +37,7 @@ class SlapperHuman extends Human {
 
             $add = new PlayerListPacket();
             $add->type = 0;
-            $add->entries[] = [$uuid, $entityId, isset($this->namedtag->MenuName) ? $this->namedtag["MenuName"] : "", $this->skinId, $this->skin];
+            $add->entries[] = [$uuid, $entityId, isset($this->namedtag->MenuName) ? $this->namedtag["MenuName"] : "", $this->setNameTagVisible(), $this->setNameTagAlwaysVisible(), $this->skinId, $this->skin];
             $player->dataPacket($add);
             if ($this->namedtag["MenuName"] === "") {
                 $remove = new PlayerListPacket();
