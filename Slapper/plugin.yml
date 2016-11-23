@@ -63,4 +63,4 @@ permissions:
 
   slapper.seeId:
     description: Allow seeing entity IDs under Slapper entities' names
-    default: false
+    default: op
