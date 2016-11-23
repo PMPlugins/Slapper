@@ -109,7 +109,7 @@ class SlapperEntity extends Entity {
         $pk->pitch = 0;
         $pk->item = Item::get(0);
         $pk->metadata = [
-            self::DATA_FLAGS => [self::DATA_TYPE_LONG, ((1 << self::DATA_FLAG_INVISIBLE) | (1 << self::DATA_FLAG_NO_AI))],
+            self::DATA_FLAGS => [self::DATA_TYPE_LONG, ((1 << self::DATA_FLAG_INVISIBLE) | (1 << self::DATA_FLAG_CAN_SHOW_NAMETAG) | (1 << self::DATA_FLAG_ALWAYS_SHOW_NAMETAG) | (1 << self::DATA_FLAG_NO_AI))],
             self::DATA_NAMETAG => [self::DATA_TYPE_STRING, $name],
             self::DATA_LEAD_HOLDER_EID => [self::DATA_TYPE_LONG, -1]
         ];

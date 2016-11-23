@@ -27,7 +27,7 @@ class SlapperHuman extends Human {
             $pk->pitch = $this->pitch;
             $pk->item = $this->getInventory()->getItemInHand();
             $pk->metadata = [
-                self::DATA_FLAGS => [self::DATA_TYPE_LONG, ((1 << self::DATA_FLAG_NO_AI) | ($this->isNameTagVisible() ? (1 << self::DATA_FLAG_CAN_SHOW_NAMETAG) : 0))],
+                self::DATA_FLAGS => [self::DATA_TYPE_LONG, ((1 << self::DATA_FLAG_NO_AI) | ($this->isNameTagVisible() ? (1 << self::DATA_FLAG_CAN_SHOW_NAMETAG) | (1 << self::DATA_FLAG_ALWAYS_SHOW_NAMETAG) : 0))],
                 self::DATA_NAMETAG => [self::DATA_TYPE_STRING, str_ireplace("{name}", $player->getName(), str_ireplace("{display_name}", $player->getDisplayName(), $player->hasPermission("slapper.seeId") ? $this->getNameTag() . "\n" . \pocketmine\utils\TextFormat::GREEN . "Entity ID: " . $entityId : $this->getNameTag()))],
                 self::DATA_LEAD_HOLDER_EID => [self::DATA_TYPE_LONG, -1]
             ];
